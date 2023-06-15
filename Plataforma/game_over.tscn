@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://cp1ya58tbl7bk"]
+
+[node name="GameOver" type="LineEdit"]
+offset_right = 322.0
+offset_bottom = 180.0
+text = "game over"
+alignment = 1
