@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dosb4cpg3b1rh"]
+
+[ext_resource type="Script" path="res://Pontos.cs" id="1_pjbru"]
+[ext_resource type="Texture2D" uid="uid://nls1vly8lhb5" path="res://pixel_platformer/Tiles/tile_0160.png" id="2_fy4p8"]
+
+[node name="Pontos" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pjbru")
+
+[node name="Tile0160" type="Sprite2D" parent="."]
+position = Vector2(311, 9)
+texture = ExtResource("2_fy4p8")

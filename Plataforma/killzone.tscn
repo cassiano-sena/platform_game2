@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://cieq3gtva45gd"]
+
+[ext_resource type="Script" path="res://Killzone.cs" id="1_3gj4o"]
+[ext_resource type="Texture2D" uid="uid://b5vdvo5qwgxrj" path="res://pixel_platformer/Tiles/tile_0156.png" id="1_87880"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yrl1h"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_87880")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nkyax"]
+size = Vector2(20, 23)
+
+[node name="Killzone" type="Area2D"]
+script = ExtResource("1_3gj4o")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_yrl1h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_nkyax")
+
+[connection signal="body_entered" from="." to="." method="OnBodyEntered"]
